@@ -1,16 +1,20 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./src/index.mjs",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/api/server.js"
-      }
-    ]
-  }
-  
+  "env": {
+    "HOSTNAME": "0.0.0.0",
+    "PORT": 3000
+  },
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "src": "./src/index.mjs",
+    "command": "npm run build",
+    "output": "dist"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
+}

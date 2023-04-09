@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const hostname = process.env.HOSTNAME||localhost;
+const hostname = process.env.HOSTNAME||"localhost";
 const port = process.env.PORT||3000; 
  
 app.listen(port, hostname, () => {
