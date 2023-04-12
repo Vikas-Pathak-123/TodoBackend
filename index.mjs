@@ -1,4 +1,4 @@
-import app from './app.mjs'
+import app from './src/app.mjs'
 import dotenv from 'dotenv';
 
 
