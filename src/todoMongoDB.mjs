@@ -5,9 +5,8 @@ import dotenv from 'dotenv';
 const router = express.Router();
 dotenv.config();
 
-
 mongoose.connect(
-  `mongodb+srv://123vikasvp79:Jo4PK1irDiCUdRdZ@cluster0.fugcxfg.mongodb.net/?retryWrites=true&w=majority`,
+  `mongodb+srv://123${process.env.USERNAME}vp79:${process.env.PASSWORD}@cluster0.fugcxfg.mongodb.net/?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
